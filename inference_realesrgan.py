@@ -148,6 +148,7 @@ def main():
         except RuntimeError as error:
             print('Error', error)
             print('If you encounter CUDA out of memory, try to set --tile with a smaller number.')
+            raise ValueError('Error', error)
         else:
             if args.ext == 'auto':
                 extension = extension[1:]
